@@ -18,7 +18,7 @@ export default function SearchBar() {
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   // Call API to get all Pokmon names
-  const { data } = useQuery<{ pokemons: Array<{ name: string }> }>(GET_POKEMONS_NAME, {
+  const { data } = useQuery(GET_POKEMONS_NAME, {
     variables: { first: 151 },
   });
 
