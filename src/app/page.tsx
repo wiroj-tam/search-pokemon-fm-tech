@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import SearchBar from "@/components/SearchBar";
 import PokemonResult from "@/components/PokemonResult";
 
