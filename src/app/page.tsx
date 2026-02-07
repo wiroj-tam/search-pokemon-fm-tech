@@ -5,10 +5,7 @@ type Props = {
   searchParams: Promise<{ name?: string }>;
 };
 
-export default async function Home({ searchParams }: Props) {
-  const params = await searchParams;
-  const name = params.name ?? "";
-
+export default async function Home() {
   return (
     <main className="min-h-screen px-4 py-10">
       <div className="max-w-3xl mx-auto">
@@ -16,7 +13,7 @@ export default async function Home({ searchParams }: Props) {
           Pokémon Search
         </h1>
         <SearchBar />
-        <PokemonResult name={name} />
+        <PokemonResult />
       </div>
     </main>
   );

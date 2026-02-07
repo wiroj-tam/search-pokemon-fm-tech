@@ -10,7 +10,7 @@ export default function PokemonResult() {
   const searchParams = useSearchParams();
   const name = searchParams.get("name");
 
-  const { data, loading, error } = useQuery(GET_POKEMON, {
+  const { data, loading, error } = useQuery<{ pokemon: Array<{ name: string }> }>(GET_POKEMON, {
     variables: { name },
     skip: !name,
   });
